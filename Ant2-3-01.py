@@ -11,7 +11,7 @@ def dp(N,wv,W):
             p = s - wv[i][0]
             value[s] = max(value[p] + wv[i][1],value[s])
     print(max(value))
-    
+
     #どう見ても同じものを二回入れているように見えるけどその理由がよくわかんない
     #これはvalue[2] = 3をvalue[4]のときに使ってる => いわゆる重複ありのときだから
 
