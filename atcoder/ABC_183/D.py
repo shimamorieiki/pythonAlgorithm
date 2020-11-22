@@ -18,17 +18,17 @@
 # 1≤W,Pi≤10^9
 # 入力はすべて整数
 
-# N,W = 4,10
-# a = [[1, 3, 5], [2, 4, 4], [3, 10, 6], [2, 4, 1]]
-N,W = map(int,input().split(" "))
-a = []
-for i in range(N):
-    a.append(list(map(int,input().split(" "))))
+N,W = 4,10
+a = [[1, 3, 5], [2, 4, 4], [3, 10, 6], [2, 4, 1]]
+# N,W = map(int,input().split(" "))
+# a = []
+# for i in range(N):
+#     a.append(list(map(int,input().split(" "))))
 
 b = [0]*(2*(10**5))
 for i in a:
-    c = [i[2] for j in range(i[1]-i[0])]
-    b[i[0]:i[1]] = [x + y for (x, y) in zip(c, b[i[0]:i[1]])]
+    
+
 if max(b) <=W:
     print("Yes")
 else:
@@ -36,3 +36,5 @@ else:
 # これがLTEなことくらい最初から分かってた
 # 多分自分の知ってるテクニックでは解けないんだと思う
 # 以上!!
+# 範囲が定まっており、その内側を全部埋めないといけないときが難しい
+# こういうときは右端から左端を引けばどうにかなりそうだが、思いつかない
