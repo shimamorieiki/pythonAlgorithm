@@ -21,23 +21,53 @@
 # coder
 
 # atcoder
+# 2回目
+S = list(input())
+T = list(input())
+sB = S[:]
+ans = []
+if len(T) > len(S):
+    print("UNRESTORABLE")
+else:
+    for i in range(len(S)-len(T)+1):
+        s = sB[:]
+        for j in range(len(T)):
+            if  s[i+j] == T[j] or s[i+j] == "?":
+                s[i+j] = T[j]
+            else:
+                break
+        else:
+            ans.append("".join(s).replace("?","a"))
+            
+if len(ans) == 0:
+    print("UNRESTORABLE")
+else:
+    ans = sorted(ans)
+    print(ans[0])
+# 二回目反省
+# ?b??
+# ab
+# のときに abaaにならない。
+# なんか上手く行かない。
 
-S = "?tc????"
-T = "coder"
 
-srv = "".join(list(reversed(S)))
-trv = "".join(list(reversed(T)))
-print(srv,trv)
-dp = [[0]*(len(srv)) for i in len(trv)]
+# 1回目
+# S = "?tc????"
+# T = "coder"
 
-for i in range(1,len(srv)):
-    if trv[0]==srv[i] or srv[i]=="?":
-        dp[0][i] = trv[0]
+# srv = "".join(list(reversed(S)))
+# trv = "".join(list(reversed(T)))
+# print(srv,trv)
+# dp = [[0]*(len(srv)) for i in len(trv)]
 
-for i in range(1,len(trv)):
-    for j in range(1,len(srv)):
-        if trv[i]==srv[j] or srv[j]=="?":
-            dp[i][j] = dp[i-1][j-1]+trv[i]
+# for i in range(1,len(srv)):
+#     if trv[0]==srv[i] or srv[i]=="?":
+#         dp[0][i] = trv[0]
+
+# for i in range(1,len(trv)):
+#     for j in range(1,len(srv)):
+#         if trv[i]==srv[j] or srv[j]=="?":
+#             dp[i][j] = dp[i-1][j-1]+trv[i]
 
 
 

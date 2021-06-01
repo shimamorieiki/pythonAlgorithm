@@ -23,15 +23,39 @@
 # 6
 
 # 1
-result = []
+# 二回目
 N = int(input())
+a = []
 for i in range(N):
-    x = int(input())
-    if result.count(x)==0:
-        result.append(x) #ここがresult内を走査してるから計算量O(1)じゃないってことか
-    else: 
-        result.remove(x)
-print(len(result))
+    a.append(int(input()))
+
+a = sorted(a)
+
+s = a[0]
+count = 0
+ans = 0
+for i in range(1,len(a)):
+    if s == a[i]:
+        count+=1
+    else:
+        if count % 2 == 0:
+            ans +=1
+        count =0
+    s = a[i]
+else:
+    if count % 2 == 0:
+        ans +=1
+print(ans)
+# 一回目
+# result = []
+# N = int(input())
+# for i in range(N):
+#     x = int(input())
+#     if result.count(x)==0:
+#         result.append(x) #ここがresult内を走査してるから計算量O(1)じゃないってことか
+#     else: 
+#         result.remove(x)
+# print(len(result))
 
 # result = [0]*(10**9) が大きすぎるらしい
 # バケツソートの方法で頑張ろうとした
