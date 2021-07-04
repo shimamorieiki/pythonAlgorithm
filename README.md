@@ -1,6 +1,6 @@
 # pythonAlgorithm
 
-Encoding By Python
+Coding By Python
 
 ## Algo
 C言語による初めてのアルゴリズム入門 by Python
