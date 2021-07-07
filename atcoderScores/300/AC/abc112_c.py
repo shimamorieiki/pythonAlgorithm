@@ -20,6 +20,26 @@
 
 #  2 2 6
 
+# 2回目
+N = int(input())
+a = []
+for i in range(N):
+    xyh = list(map(int, input().split()))
+    a.append(xyh)
+    if xyh[2]:
+        x, y, h = xyh
+
+for i in range(101):
+    for j in range(101):
+        H = h+abs(x-i)+abs(y-j)
+        if all(h == max(H-abs(x-i)-abs(y-j),0) for x,y,h in a):
+            print(i,j,H)
+            exit(0)
+
+# 上手く行かなかった原因はHが0になる可能性が残ってたから。
+# H>0のものを決めてから比較すればどうにかなりそう
+
+# 1回目
 # N = 4
 # a = [[2,3,5],[2,1,5],[1,2,5],[3,2,5]]
 # a.sort(key=lambda a:a[2])

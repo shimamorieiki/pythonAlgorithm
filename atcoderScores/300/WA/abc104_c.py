@@ -24,6 +24,25 @@
 
 # 3
 
+# 二回目の解答
+D,G = map(int,input().split(" "))
+score = []
+bonus = []
+for i in range(D):
+    p,c = map(int,input().split(" "))
+    score.append(p)
+    bonus.append(c)
+for i in range(1000):
+    for j in range(D):
+        total = (j+1)*score[j]       
+
+# N問を解いたときの合計点の最高がM点
+# 何も思いつかない。
+# DPか〜〜〜。
+# 出てくる文字の桁数を落とせば計算量が間に合うらしい
+# 下の解法でも解けそう。惜しかった。
+
+#一回目の解答
 D,G = 2,700
 a = [[3,500],[5,800]]
 b = [i[0] for i in a]
@@ -48,5 +67,3 @@ while resmax < G:
 # 中途半端に解く配点は1種類以下であり、それ以外の配点は完全に解くかまったく解かない。
 # 中途半端に解く配点があるなら、それは完全に解く配点以外の配点の中で最も高い配点である。
 # 確かに......
-
-# AC 解法見た

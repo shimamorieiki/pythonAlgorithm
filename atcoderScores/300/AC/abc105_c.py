@@ -10,7 +10,25 @@
 
 # -9
 # 1011
+# 二回目
+N = int(input())
+ans = ""
+if N == 0:
+    print(0)
+    exit(0)
+while N != 0:
+    i = abs(N) % 10
+    mod = i % 2
+    if mod == 0:
+        ans = "0" + ans
+    else:
+        ans = "1" + ans 
+    N = (N - mod) // -2
+print(ans)
+# 単純にshift操作みたいなやつでどうにかなった。
 
+
+# 一回目
 # N = -9
 # アルゴリズムが思いつかない
 # AC 解答見たけどまじで意味不明
