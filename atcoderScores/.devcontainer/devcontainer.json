@@ -1,0 +1,12 @@
+{
+    "name": "python-algorithm-atcoder-scores",
+    "dockerFile": "Dockerfile",
+    "remoteUser": "docker",
+    "extensions": [
+		"magicstack.MagicPython",
+		"ms-python.vscode-pylance",
+		"ms-python.python",
+		"donjayamanne.python-extension-pack",
+		"humao.rest-client"
+	]
+}
