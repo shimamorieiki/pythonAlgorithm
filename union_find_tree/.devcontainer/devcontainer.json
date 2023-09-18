@@ -1,0 +1,19 @@
+{
+	"name": "union find tree",
+	"dockerFile": "Dockerfile",
+	"context": "..",
+	"remoteUser": "docker",
+	"workspaceFolder": "/workspaces/pythonAlgorithm/union_find_tree",
+	"customizations":{
+		"vscode":{
+			"extensions":[
+				"magicstack.MagicPython",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"donjayamanne.python-extension-pack",
+				"humao.rest-client"
+			]
+		}
+	},
+	"postAttachCommand": "pip3 install -r requirements.txt"
+}
